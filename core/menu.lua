@@ -1,4 +1,4 @@
-core/menu.lua-- Botão Flutuante "SOY" (Menu Principal)
+-- Botão Flutuante "SOY" (Menu Principal)
 
 local soyButton = Instance.new("ScreenGui")
 soyButton.Name = "SOY_Float"
@@ -17,10 +17,9 @@ button.Font = Enum.Font.GothamSemibold
 button.TextSize = 14
 button.Parent = soyButton
 
-soyButton.Parent = game:GetService("CoreGui")
+soyButton.Parent = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
 
 button.MouseButton1Click:Connect(function()
-   -- Aqui futuramente vamos abrir o menu completo
    game.StarterGui:SetCore("SendNotification", {
        Title = "SOY HUB",
        Text = "Menu será carregado aqui futuramente.",
